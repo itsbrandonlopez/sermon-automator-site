@@ -10,37 +10,25 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
   :root {
-    --bg: #F5F4EF;
-    --surface: #FFFFFF;
-    --surface-alt: #ECE9E0;
-    --ink: #201C16;
-    --ink-muted: #5B564C;
-    --accent: #B9722A;
-    --accent-ink: #FFFFFF;
-    --accent-soft: #F1DCC0;
-    --teal: #2C6E68;
-    --teal-soft: #DCEAE7;
-    --line: #DDD8CC;
-    --shadow: 0 1px 2px rgba(32,28,22,0.06), 0 10px 28px rgba(32,28,22,0.06);
-    --dot-yellow:#C99A2E; --dot-green:#4C9A5B; --dot-purple:#8A5FBF; --dot-cyan:#2F8FA0; --dot-mint:#3FAE8C;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg:#16130E; --surface:#201B14; --surface-alt:#2A2418; --ink:#F1EBDD; --ink-muted:#B7AD9A;
-      --accent:#E3A24E; --accent-ink:#1A1409; --accent-soft:#3A2C17; --teal:#59B0A8; --teal-soft:#1E3733; --line:#3A3327;
-      --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 14px 32px rgba(0,0,0,0.4);
-      --dot-yellow:#E8C15A; --dot-green:#6BBF7C; --dot-purple:#A986D9; --dot-cyan:#63C4D4; --dot-mint:#74D6B8;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg:#16130E; --surface:#201B14; --surface-alt:#2A2418; --ink:#F1EBDD; --ink-muted:#B7AD9A;
-    --accent:#E3A24E; --accent-ink:#1A1409; --accent-soft:#3A2C17; --teal:#59B0A8; --teal-soft:#1E3733; --line:#3A3327;
-    --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 14px 32px rgba(0,0,0,0.4);
-    --dot-yellow:#E8C15A; --dot-green:#6BBF7C; --dot-purple:#A986D9; --dot-cyan:#63C4D4; --dot-mint:#74D6B8;
+    --bg: #1B1C1F;
+    --surface: #232428;
+    --surface-alt: #2B2C31;
+    --ink: #F4F4F5;
+    --ink-muted: #A3A9B0;
+    --line: #37383D;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 16px 36px rgba(0,0,0,0.45);
+
+    --accent: #FF7A33;
+    --accent-ink: #1B1C1F;
+
+    --blue: #3D8BFF;
+    --red: #FF4747;
+    --yellow: #FFC53D;
+    --orange: #FF7A33;
   }
 
   * { box-sizing: border-box; }
-  html { color-scheme: light dark; }
+  html { color-scheme: dark; }
   body {
     margin: 0;
     background: var(--bg);
@@ -50,7 +38,7 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  ::selection { background: var(--accent-soft); color: var(--ink); }
+  ::selection { background: rgba(255,122,51,0.35); color: var(--ink); }
 
   .wrap {
     max-width: 1040px;
@@ -72,7 +60,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--ink-muted);
     display: inline-flex;
     align-items: center;
     gap: 0.55em;
@@ -155,6 +143,7 @@
     margin: 1.9rem 0;
     padding-left: 1.3rem;
     border-left: 2px solid var(--accent);
+    max-width: 60ch;
   }
 
   h2 { font-size: clamp(1.7rem, 1.1vw + 1.35rem, 2.5rem); line-height: 1.14; }
@@ -198,7 +187,7 @@
   }
   @keyframes pulse {
     0%, 100% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 4px var(--bg); }
-    50% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px color-mix(in srgb, var(--dot-mint) 35%, transparent); }
+    50% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 8px color-mix(in srgb, var(--accent) 40%, transparent); }
   }
   .stop .tag {
     font-family: 'IBM Plex Mono', ui-monospace, monospace;
@@ -280,7 +269,7 @@
   .track {
     background: var(--surface);
     padding: 1.6rem 1.6rem;
-    border-left: 3px solid var(--dot-yellow);
+    border-left: 3px solid var(--accent);
   }
   .track h3 {
     font-family: 'Manrope', sans-serif;
@@ -310,7 +299,7 @@
     font-size: 0.68rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--blue);
   }
   .who-card h3 {
     font-family: 'Fraunces', serif;
@@ -368,15 +357,15 @@
     <h1>Redeem the hours between <span>&ldquo;Amen&rdquo;</span> and &ldquo;Published.&rdquo;</h1>
     <p class="sub">Sermon Automator turns one service recording into a fully optimized YouTube upload — transcript, title, description, chapter markers, tags, shorts, and captions — written in your church's own voice, before Monday's meetings start.</p>
     <div class="marker-rule">
-      <span class="dot" style="background:var(--dot-yellow)"></span>
+      <span class="dot" style="background:var(--blue)"></span>
       <span class="line"></span>
-      <span class="dot" style="background:var(--dot-green)"></span>
+      <span class="dot" style="background:var(--red)"></span>
       <span class="line"></span>
-      <span class="dot" style="background:var(--dot-cyan)"></span>
+      <span class="dot" style="background:var(--yellow)"></span>
       <span class="line"></span>
-      <span class="dot" style="background:var(--dot-purple)"></span>
+      <span class="dot" style="background:var(--orange)"></span>
       <span class="line"></span>
-      <span class="dot" style="background:var(--dot-mint)"></span>
+      <span class="dot" style="background:var(--blue)"></span>
     </div>
   </header>
 
@@ -386,18 +375,18 @@
       <h2>The sermon is finished. The real work is just starting.</h2>
       <p class="lede">Nobody puts this on the calendar, and it never gets easier. Every service produces the same second job: transcribe it, describe it, tag it, chapter it, cut it down, caption it — all before it can do the one thing it was made to do, which is be found.</p>
       <ul class="dot-list prose">
-        <li><span class="dot" style="background:var(--dot-yellow)"></span><span><strong>Transcribing a 90-minute service</strong> by hand, or babysitting a tool that half-does it.</span></li>
-        <li><span class="dot" style="background:var(--dot-green)"></span><span><strong>Writing a description from scratch</strong>, in a voice that has to sound like your church and not like a chatbot.</span></li>
-        <li><span class="dot" style="background:var(--dot-cyan)"></span><span><strong>Counting tag characters by hand</strong>, because YouTube's own limit doesn't forgive a guess.</span></li>
-        <li><span class="dot" style="background:var(--dot-purple)"></span><span><strong>Re-typing chapter markers</strong> you already placed once, in Resolve, an hour ago.</span></li>
-        <li><span class="dot" style="background:var(--dot-mint)"></span><span><strong>Doing the whole thing again</strong> for the sermon-only cut, because it isn't the same video.</span></li>
-        <li><span class="dot" style="background:var(--dot-yellow)"></span><span><strong>Watching a good clip idea disappear</strong> because there was no time left in the week to go find it.</span></li>
+        <li><span class="dot" style="background:var(--blue)"></span><span><strong>Transcribing a 90-minute service</strong> by hand, or babysitting a tool that half-does it.</span></li>
+        <li><span class="dot" style="background:var(--red)"></span><span><strong>Writing a description from scratch</strong>, in a voice that has to sound like your church and not like a chatbot.</span></li>
+        <li><span class="dot" style="background:var(--yellow)"></span><span><strong>Counting tag characters by hand</strong>, because YouTube's own limit doesn't forgive a guess.</span></li>
+        <li><span class="dot" style="background:var(--orange)"></span><span><strong>Re-typing chapter markers</strong> you already placed once, in Resolve, an hour ago.</span></li>
+        <li><span class="dot" style="background:var(--blue)"></span><span><strong>Doing the whole thing again</strong> for the sermon-only cut, because it isn't the same video.</span></li>
+        <li><span class="dot" style="background:var(--red)"></span><span><strong>Watching a good clip idea disappear</strong> because there was no time left in the week to go find it.</span></li>
       </ul>
     </div>
   </section>
 
   <section class="why reveal">
-    <div class="wrap prose">
+    <div class="wrap">
       <p class="eyebrow">Why this part isn't optional</p>
       <h2>You already did the hard part.</h2>
       <p class="lede">The camera work, the mix, the message itself — that's finished the moment the service ends. It's also the expensive part, and it's already paid for. What happens in the next ten minutes is what decides whether any of it reaches past the room it was preached in.</p>
@@ -412,13 +401,13 @@
       <h2>One recording in. A published, searchable post out.</h2>
       <p class="lede">Not a chatbot you have to prompt correctly every week. A locked process, built from what actually works and run the same way every Sunday.</p>
       <div class="scrubber">
-        <div class="stop"><span class="dot" style="background:var(--dot-yellow)"></span><p class="tag">DROP</p><h3>Drop it in.</h3><p>A full service or just the sermon — a video file, or an .srt if that's what you've already got.</p></div>
-        <div class="stop"><span class="dot" style="background:var(--dot-green)"></span><p class="tag">TRANSCRIBE</p><h3>Transcribed, on your Mac.</h3><p>No upload, no cloud queue, nothing waiting on someone else's server.</p></div>
-        <div class="stop"><span class="dot" style="background:var(--dot-cyan)"></span><p class="tag">MARK</p><h3>Chapters, your way.</h3><p>Paste them, import an EDL, or pull them live from an open Resolve timeline.</p></div>
-        <div class="stop"><span class="dot" style="background:var(--dot-purple)"></span><p class="tag">WRITE</p><h3>Description &amp; tags, in your voice.</h3><p>From a locked template built around your church's real voice — not reinvented by a chatbot each week.</p></div>
-        <div class="stop"><span class="dot" style="background:var(--dot-mint)"></span><p class="tag">CLIP</p><h3>Clip ideas, ready to cut.</h3><p>Complete-thought segments pulled from the sermon itself, capped at two and a half minutes.</p></div>
-        <div class="stop"><span class="dot" style="background:var(--dot-yellow)"></span><p class="tag">CAPTION</p><h3>Captions, cleaned up.</h3><p>Pause-aware timing, punctuation stripped, proofread against your house style.</p></div>
-        <div class="stop"><span class="dot" style="background:var(--dot-mint)"></span><p class="tag">PUBLISH</p><h3>Searchable. Chaptered. Tagged.</h3><p>And off your plate.</p></div>
+        <div class="stop"><span class="dot" style="background:var(--blue)"></span><p class="tag">DROP</p><h3>Drop it in.</h3><p>A full service or just the sermon — a video file, or an .srt if that's what you've already got.</p></div>
+        <div class="stop"><span class="dot" style="background:var(--red)"></span><p class="tag">TRANSCRIBE</p><h3>Transcribed, on your Mac.</h3><p>No upload, no cloud queue, nothing waiting on someone else's server.</p></div>
+        <div class="stop"><span class="dot" style="background:var(--yellow)"></span><p class="tag">MARK</p><h3>Chapters, your way.</h3><p>Paste them, import an EDL, or pull them live from an open Resolve timeline.</p></div>
+        <div class="stop"><span class="dot" style="background:var(--orange)"></span><p class="tag">WRITE</p><h3>Description &amp; tags, in your voice.</h3><p>From a locked template built around your church's real voice — not reinvented by a chatbot each week.</p></div>
+        <div class="stop"><span class="dot" style="background:var(--blue)"></span><p class="tag">CLIP</p><h3>Clip ideas, ready to cut.</h3><p>Complete-thought segments pulled from the sermon itself, capped at two and a half minutes.</p></div>
+        <div class="stop"><span class="dot" style="background:var(--red)"></span><p class="tag">CAPTION</p><h3>Captions, cleaned up.</h3><p>Pause-aware timing, punctuation stripped, proofread against your house style.</p></div>
+        <div class="stop"><span class="dot" style="background:var(--orange)"></span><p class="tag">PUBLISH</p><h3>Searchable. Chaptered. Tagged.</h3><p>And off your plate.</p></div>
       </div>
     </div>
   </section>
@@ -429,9 +418,9 @@
       <h2>Built in the room. Tested on real Sundays.</h2>
       <p class="lede">Sermon Automator wasn't designed on a whiteboard and shipped. It's been run against real service recordings, week after week, and revised every time reality disagreed with the plan — until it held up on the weeks that mattered.</p>
       <div class="stats">
-        <div class="stat"><div class="num">90 min &rarr; &lt;60 sec</div><div class="label">A full service transcribed, start to finish, before you've finished your coffee.</div></div>
-        <div class="stat"><div class="num">100% on-device</div><div class="label">Transcription and writing both run locally. Your sermon never leaves your machine to get described.</div></div>
-        <div class="stat"><div class="num">1 church = 1 voice</div><div class="label">Separate voice, tone, and hashtag profiles per church — the same system, never the same-sounding post.</div></div>
+        <div class="stat"><div class="num" style="color:var(--blue)">90 min &rarr; &lt;60 sec</div><div class="label">A full service transcribed, start to finish, before you've finished your coffee.</div></div>
+        <div class="stat"><div class="num" style="color:var(--red)">100% on-device</div><div class="label">Transcription and writing both run locally. Your sermon never leaves your machine to get described.</div></div>
+        <div class="stat"><div class="num" style="color:var(--yellow)">1 church = 1 voice</div><div class="label">Separate voice, tone, and hashtag profiles per church — the same system, never the same-sounding post.</div></div>
       </div>
       <div class="founder">
         <p>This didn't start as a product. It started as a Sunday afternoon lost to a transcription tool, a chat window, and a character counter — every week, for years. Sermon Automator is what that process became once it was rebuilt from scratch: locked into a system instead of reinvented from memory every Monday, then run against real churches, real editors, and real feedback until it earned its place in the workflow.</p>
@@ -445,14 +434,14 @@
       <p class="eyebrow">What's on the timeline</p>
       <h2>Everything the manual version needed. None of the manual part.</h2>
       <div class="tracks">
-        <div class="track" style="border-left-color:var(--dot-yellow)"><h3>On-device transcription</h3><p>A 90-minute service, transcribed locally in under a minute, with names and places intact.</p></div>
-        <div class="track" style="border-left-color:var(--dot-green)"><h3>Your church's real voice</h3><p>Description style, tone, and hashtag rules are set per church — not one generic voice pretending to be all of them.</p></div>
-        <div class="track" style="border-left-color:var(--dot-cyan)"><h3>Chapters, your way</h3><p>Paste them, import an EDL, or pull markers live from an open DaVinci Resolve timeline.</p></div>
-        <div class="track" style="border-left-color:var(--dot-purple)"><h3>Shorts-ready clip ideas</h3><p>Complete-thought segments — a hook, the point, a close — found straight from the transcript.</p></div>
-        <div class="track" style="border-left-color:var(--dot-mint)"><h3>Cleaned-up captions</h3><p>Pause-aware cue timing, punctuation stripped, proofread against your house style, exported ready for Resolve.</p></div>
-        <div class="track" style="border-left-color:var(--dot-yellow)"><h3>Deep Resolve integration</h3><p>Push clip markers to your timeline, pull chapters and subtitles back out, even set up next week's project folder.</p></div>
-        <div class="track" style="border-left-color:var(--dot-green)"><h3>Pick up where you left off</h3><p>Quit mid-sermon, come back Tuesday — your transcript, markers, and progress are exactly where you left them.</p></div>
-        <div class="track" style="border-left-color:var(--dot-purple)"><h3>Built on a locked system</h3><p>Every post follows the same proven template. Nothing left to a chatbot's mood that day.</p></div>
+        <div class="track" style="border-left-color:var(--blue)"><h3>On-device transcription</h3><p>A 90-minute service, transcribed locally in under a minute, with names and places intact.</p></div>
+        <div class="track" style="border-left-color:var(--red)"><h3>Your church's real voice</h3><p>Description style, tone, and hashtag rules are set per church — not one generic voice pretending to be all of them.</p></div>
+        <div class="track" style="border-left-color:var(--yellow)"><h3>Chapters, your way</h3><p>Paste them, import an EDL, or pull markers live from an open DaVinci Resolve timeline.</p></div>
+        <div class="track" style="border-left-color:var(--orange)"><h3>Shorts-ready clip ideas</h3><p>Complete-thought segments — a hook, the point, a close — found straight from the transcript.</p></div>
+        <div class="track" style="border-left-color:var(--blue)"><h3>Cleaned-up captions</h3><p>Pause-aware cue timing, punctuation stripped, proofread against your house style, exported ready for Resolve.</p></div>
+        <div class="track" style="border-left-color:var(--red)"><h3>Deep Resolve integration</h3><p>Push clip markers to your timeline, pull chapters and subtitles back out, even set up next week's project folder.</p></div>
+        <div class="track" style="border-left-color:var(--yellow)"><h3>Pick up where you left off</h3><p>Quit mid-sermon, come back Tuesday — your transcript, markers, and progress are exactly where you left them.</p></div>
+        <div class="track" style="border-left-color:var(--orange)"><h3>Built on a locked system</h3><p>Every post follows the same proven template. Nothing left to a chatbot's mood that day.</p></div>
       </div>
     </div>
   </section>
